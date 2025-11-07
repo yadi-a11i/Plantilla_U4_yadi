@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+
+/* Base Styles */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    color: #2d3748;
+    background-color: white;
+    margin: 0;
+    line-height: 1.625;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  .btn-primary {
+    background: linear-gradient(to right, #ff6b9d, #6c5ce7);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .btn-secondary {
+    border: 2px solid #ff6b9d;
+    color: #ff6b9d;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    background: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .btn-secondary:hover {
+    background-color: #ff6b9d;
+    color: white;
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s;
+  }
+
+  .card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: scale(1.05);
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, #ff6b9d 0%, #6c5ce7 50%, #ffd3e1 100%);
+  }
+
+  /* Hero sections backgrounds */
+  .hero-gradient-primary {
+    background: linear-gradient(135deg, #ff6b9d 0%, #6c5ce7 100%);
+  }
+
+  .hero-gradient-secondary {
+    background: linear-gradient(135deg, #6c5ce7 0%, #ff6b9d 100%);
+  }
+
+  .hero-text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
